@@ -29,14 +29,17 @@ public class LoginServlet extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         String username = request.getParameter("username");
         String password = request.getParameter("passowrd");
         
-        if(username.isEmpty()||password.isEmpty())
+        if(username==null||password==null||username.isEmpty()||password.isEmpty())
         {
             request.setAttribute("message", "Both values are required!");
+            getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
+        
+        getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
         
         
     }
