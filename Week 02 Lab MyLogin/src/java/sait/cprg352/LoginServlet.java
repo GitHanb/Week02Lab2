@@ -6,7 +6,6 @@
 package sait.cprg352;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,10 +36,7 @@ public class LoginServlet extends HttpServlet
         {
             request.setAttribute("message", "Both values are required!");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-            return;
         }
-        
-        getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
         
         
         
