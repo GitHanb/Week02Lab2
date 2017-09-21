@@ -22,14 +22,13 @@ public class LoginServlet extends HttpServlet
             throws ServletException, IOException
     {
        //display login.jsp
-        //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         String username = request.getParameter("username");
         String password = request.getParameter("passowrd");
         
