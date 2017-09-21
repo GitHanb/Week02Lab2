@@ -18,5 +18,20 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MainPageServlet extends HttpServlet 
 {
-    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException
+    {
+        String username = request.getParameter("username");
+        //display login.jsp
+        request.setAttribute("meesage", "Hello "+ username);
+        getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException 
+    {
+        
+    }
 }
