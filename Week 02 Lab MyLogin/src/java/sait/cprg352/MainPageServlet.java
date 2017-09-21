@@ -23,9 +23,8 @@ public class MainPageServlet extends HttpServlet
             throws ServletException, IOException
     {
         
-        String username = request.getParameter("username");
-        request.setAttribute("mainMessage", "Hello "+ username);
         getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
+        
     }
 
     @Override
