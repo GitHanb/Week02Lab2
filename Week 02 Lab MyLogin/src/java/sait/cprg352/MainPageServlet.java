@@ -24,7 +24,7 @@ public class MainPageServlet extends HttpServlet
     {
         String username = request.getParameter("username");
         //display login.jsp
-        request.setAttribute("meesage", "Hello "+ username);
+        request.setAttribute("mainMessage", "Hello "+ username);
         getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
     }
 
