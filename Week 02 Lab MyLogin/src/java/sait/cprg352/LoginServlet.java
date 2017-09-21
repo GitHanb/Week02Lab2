@@ -22,7 +22,8 @@ public class LoginServlet extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-       getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+       //display login.jsp
+        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
     @Override
@@ -37,6 +38,8 @@ public class LoginServlet extends HttpServlet
             request.setAttribute("message", "Both values are required!");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
+        
+        
     }
  
 
