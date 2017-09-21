@@ -31,11 +31,10 @@ public class LoginServlet extends HttpServlet
     {
         
         String username = request.getParameter("username");
-        String password = request.getParameter("passowrd");
+        String password = request.getParameter("passoword");
         
         if(username==null||password==null)
         {
-            //request.setAttribute("loginMessage", "Both values are required!");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             return;
         }
