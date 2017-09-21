@@ -18,7 +18,5 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MainPageServlet extends HttpServlet 
 {
-
-  
-
+    
 }
