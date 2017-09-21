@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet
     {
         
         String username = request.getParameter("username");
-        String password = request.getParameter("passoword");
+        String password = request.getParameter("password");
         
         if(username==null||password==null)
         {
