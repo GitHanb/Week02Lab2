@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet
             throws ServletException, IOException
     {
        //display login.jsp
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        //getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
     @Override
