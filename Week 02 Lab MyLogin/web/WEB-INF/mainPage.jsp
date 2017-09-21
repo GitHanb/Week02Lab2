@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Main Page</h1>
-        ${message}
+        ${mainMessage}
     </body>
 </html>
