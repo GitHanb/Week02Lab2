@@ -23,11 +23,11 @@ public class MainPageServlet extends HttpServlet
             throws ServletException, IOException
     {
         
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        
         String username = request.getParameter("username");
         //display login.jsp
         request.setAttribute("mainMessage", "Hello "+ username);
-        //getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
     }
 
     @Override
