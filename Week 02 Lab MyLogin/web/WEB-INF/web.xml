@@ -10,11 +10,11 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/login</url-pattern>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MainPageServlet</servlet-name>
-        <url-pattern>/mainPage</url-pattern>
+        <url-pattern>/MainPage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
