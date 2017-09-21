@@ -37,17 +37,18 @@ public class LoginServlet extends HttpServlet
         {
             //request.setAttribute("loginMessage", "Both values are required!");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            return;
         }
         else if(username.isEmpty()||password.isEmpty())
         {
             request.setAttribute("loginMessage", "Both values are required!");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            return;
         }
-        else
-        {
+        
             getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
             request.setAttribute("mainMessage", "Hello "+username);
-        }
+        
         
         
         
