@@ -14,7 +14,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MainPageServlet</servlet-name>
-        <url-pattern>/MainPage</url-pattern>
+        <url-pattern>/mainPage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
