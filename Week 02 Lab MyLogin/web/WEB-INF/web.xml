@@ -21,6 +21,5 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>login</welcome-file>
-        <welcome-file>mainPage</welcome-file>
     </welcome-file-list>
 </web-app>
