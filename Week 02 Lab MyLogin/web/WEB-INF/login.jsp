@@ -14,7 +14,7 @@
     <body>
         <h1>Login</h1>
         <div>
-            <form action="mainPage" method="post">
+            <form action="/mainPage" method="post">
                 Username: <input type="text" name="username" value="${username}"><br>
                 Password: <input type="text" name="password" value="${password}"><br>
                 <input type="submit" value="Login">  
