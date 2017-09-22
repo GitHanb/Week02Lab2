@@ -29,7 +29,6 @@ public class LoginServlet extends HttpServlet
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
-        
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
@@ -40,15 +39,19 @@ public class LoginServlet extends HttpServlet
         }
         else if(username.isEmpty()||password.isEmpty())
         {
-            request.setAttribute("loginMessage", "Both values are required!");
+            request.setAttribute("loginErrorMessage", "Both values are required!");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             return;
         }
-        request.setAttribute("mainMessage", "Hello "+ username);    
-        getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
-
         
-        
-            
+        UserService user = new UserService();
+        if(user.login(username, password)==true)
+        {
+            request.setAttribute("mainMessage", "Hello "+ username);    
+            getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
+        }
+        request.setAttribute("loginErrorMessage", "Invalid username and password");
+        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+    
     }
 }
