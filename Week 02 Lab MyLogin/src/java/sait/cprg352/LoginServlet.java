@@ -46,6 +46,9 @@ public class LoginServlet extends HttpServlet
         }
         request.setAttribute("mainMessage", "Hello "+ username);    
         getServletContext().getRequestDispatcher("/WEB-INF/mainPage.jsp").forward(request, response);
+
+        
+        
             
     }
 }
