@@ -14,7 +14,8 @@
     <body>
         <h1>Main Page</h1>
         <div>
-            Hello, ${username}
+            Hello, ${username}<br>
+            <a href=" ">Log out</a>
         </div>
 
     </body>
