@@ -13,6 +13,9 @@
     </head>
     <body>
         <h1>Login</h1>
+        <div>
+            Hello, ${username}
+        </div>>
 
     </body>
 </html>

@@ -19,7 +19,7 @@
                 Password: <input type="text" name="password" value="${password}"><br>
                 <input type="submit" value="Login">  
             </form>
-            ${loginMessage}
+            ${loginErrorMessage}
         </div>
     </body>
 </html>
